@@ -45,7 +45,7 @@
 				<!-- LOOP OVER THE RecipeS IN $scope.recipes -->
 				<div class="checkbox" ng-repeat="recipe in recipes">
 					<label>
-						<input type="checkbox" ng-click="deleteRecipe(recipe._id)"> {{ recipe.text }}
+						<input type="checkbox" ng-click="deleteRecipe(recipe._id)"> {{ recipe.title }}
 					</label>
 				</div>
 
@@ -63,7 +63,8 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+						<input type="text" class="form-control input-lg text-center" placeholder="Title" ng-model="formData.title">
+						<input type="text" class="form-control input-lg text-center" placeholder="Description" ng-model="formData.description">
 					</div>
 
 					<!-- createRecipe() WILL CREATE NEW RecipeS -->

@@ -26,8 +26,8 @@ module.exports = function(app) {
 
 		// create a recipe, information comes from AJAX request from Angular
 		Recipe.create({
-			text : req.body.text,
-			done : false
+			title : req.body.title,
+			description : req.body.description
 		}, function(err, recipe) {
 			if (err)
 				res.send(err);

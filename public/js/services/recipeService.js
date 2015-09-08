@@ -7,8 +7,8 @@ angular.module('recipeService', [])
 			get : function() {
 				return $http.get('/api/recipe');
 			},
-			create : function(todoData) {
-				return $http.post('/api/recipe', todoData);
+			create : function(recipeData) {
+				return $http.post('/api/recipe', recipeData);
 			},
 			delete : function(id) {
 				return $http.delete('/api/recipe/' + id);
