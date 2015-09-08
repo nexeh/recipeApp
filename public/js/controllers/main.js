@@ -10,7 +10,7 @@ angular.module('recipeApp.recipe', [])
 		// use the service to get all the recipe
 		Recipe.get()
 			.success(function(data) {
-				$scope.recipe = data;
+				$scope.recipes = data;
 				$scope.loading = false;
 			});
 
@@ -30,7 +30,7 @@ angular.module('recipeApp.recipe', [])
 					.success(function(data) {
 						$scope.loading = false;
 						$scope.formData = {}; // clear the form so our user is ready to enter another
-						$scope.recipe = data; // assign our new list of recipe
+						$scope.recipes = data; // assign our new list of recipe
 					});
 			}
 		};
@@ -44,7 +44,7 @@ angular.module('recipeApp.recipe', [])
 				// if successful creation, call our get function to get all the new recipe
 				.success(function(data) {
 					$scope.loading = false;
-					$scope.recipe = data; // assign our new list of recipe
+					$scope.recipes = data; // assign our new list of recipe
 				});
 		};
 	}]);

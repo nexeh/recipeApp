@@ -15,14 +15,14 @@ module.exports = function(app) {
 
 	// api ---------------------------------------------------------------------
 	// get all recipes
-	app.get('/api/recipes', function(req, res) {
+	app.get('/api/recipe', function(req, res) {
 
 		// use mongoose to get all recipes in the database
 		getRecipes(res);
 	});
 
 	// create recipe and send back all recipes after creation
-	app.post('/api/recipes', function(req, res) {
+	app.post('/api/recipe', function(req, res) {
 
 		// create a recipe, information comes from AJAX request from Angular
 		Recipe.create({
@@ -39,7 +39,7 @@ module.exports = function(app) {
 	});
 
 	// delete a recipe
-	app.delete('/api/recipes/:recipe_id', function(req, res) {
+	app.delete('/api/recipe/:recipe_id', function(req, res) {
 		Recipe.remove({
 			_id : req.params.recipe_id
 		}, function(err, recipe) {

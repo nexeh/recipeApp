@@ -31,21 +31,21 @@
 <body ng-controller="mainController">
 	<div class="container">
 
-		<!-- HEADER AND TODO COUNT -->
+		<!-- HEADER AND Recipe COUNT -->
 		<div class="jumbotron text-center">
 			<h1>My recepes <span class="label label-info">{{ recipes.length }}</span></h1>
 		</div>
 
-		<!-- TODO LIST -->
+		<!-- Recipe LIST -->
 		<div id="recipe-list" class="row">
 			<div class="col-sm-4 col-sm-offset-4">
 
 
 
-				<!-- LOOP OVER THE TODOS IN $scope.recipes -->
+				<!-- LOOP OVER THE RecipeS IN $scope.recipes -->
 				<div class="checkbox" ng-repeat="recipe in recipes">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(recipe._id)"> {{ recipe.text }}
+						<input type="checkbox" ng-click="deleteRecipe(recipe._id)"> {{ recipe.text }}
 					</label>
 				</div>
 
@@ -56,7 +56,7 @@
 			</div>
 		</div>
 
-		<!-- FORM TO CREATE TODOS -->
+		<!-- FORM TO CREATE RecipeS -->
 		<div id="recipe-form" class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
 				<form>
@@ -66,8 +66,8 @@
 						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
 					</div>
 
-					<!-- createToDo() WILL CREATE NEW TODOS -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+					<!-- createRecipe() WILL CREATE NEW RecipeS -->
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createRecipe()">Add</button>
 				</form>
 			</div>
 		</div>
