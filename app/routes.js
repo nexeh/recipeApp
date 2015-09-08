@@ -39,9 +39,9 @@ module.exports = function(app) {
 	});
 
 	// delete a recipe
-	app.delete('/api/recipes/:reciepe_id', function(req, res) {
+	app.delete('/api/recipes/:recipe_id', function(req, res) {
 		Recipe.remove({
-			_id : req.params.reciepe_id
+			_id : req.params.recipe_id
 		}, function(err, recipe) {
 			if (err)
 				res.send(err);

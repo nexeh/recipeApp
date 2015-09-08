@@ -1,17 +1,17 @@
-angular.module('reciepeService', [])
+angular.module('recipeService', [])
 
 	// super simple service
 	// each function returns a promise object
-	.factory('Reciepe', ['$http',function($http) {
+	.factory('Recipe', ['$http',function($http) {
 		return {
 			get : function() {
-				return $http.get('/api/reciepe');
+				return $http.get('/api/recipe');
 			},
 			create : function(todoData) {
-				return $http.post('/api/reciepe', todoData);
+				return $http.post('/api/recipe', todoData);
 			},
 			delete : function(id) {
-				return $http.delete('/api/reciepe/' + id);
+				return $http.delete('/api/recipe/' + id);
 			}
 		}
 	}]);
