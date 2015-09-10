@@ -1,0 +1,147 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="recipeApp">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Recipe Manager</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#recipe-list 				{ margin-bottom:30px; }
+		#recipe-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+
+	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
+	<script src="js/services/recipeService.js"></script> <!-- load our recipe service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!-- FORM TO CREATE RecipeS -->
+		<div id="recipe-form" class="row">
+			<div class="col-sm-12">
+				<label>Title</label>
+                <input class="form-control" id="title" type="text" placeholder="Garden fresh speghetti">
+			</div>
+
+			<div class="col-sm-8">
+				<label>Description</label>
+                <textarea class="form-control" id="decription" type="text" placeholder="My grandmothers secret speghetti recipe." rows="3"></textarea>
+			</div>
+
+			<div class="col-sm-4 col-md-3">
+				<a href="#" class="thumbnail">
+					<img src="http://placehold.it/500x500" >
+				</a>
+			</div>
+
+			<div class="col-sm-8">
+				<label>Ingredients</label>
+				<div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingQty" type="text" placeholder="1">
+	                </div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp">
+	                </div>
+	                <div class="col-xs-10">
+	                	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder">
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingQty" type="text" placeholder="1">
+	                </div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp">
+	                </div>
+	                <div class="col-xs-10">
+	                	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder">
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingQty" type="text" placeholder="1">
+	                </div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp">
+	                </div>
+	                <div class="col-xs-10">
+	                	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder">
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingQty" type="text" placeholder="1">
+	                </div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp">
+	                </div>
+	                <div class="col-xs-10">
+	                	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder">
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingQty" type="text" placeholder="1">
+	                </div>
+	                <div class="col-xs-1">
+	                	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp">
+	                </div>
+	                <div class="col-xs-10">
+	                	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder">
+	                </div>
+	            </div>
+			</div>
+
+			<div class="col-sm-8">
+				<label>Instructions</label>
+				<div>
+	                
+	                <div class="col-xs-12">
+	                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder"></textarea>
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-12">
+	                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-12">
+	                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-12">
+	                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
+	                </div>
+	            </div>
+	            <div>
+	                <div class="col-xs-12">
+	                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
+	                </div>
+	            </div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>
