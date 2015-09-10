@@ -97,11 +97,29 @@ module.exports = function(app, passport) {
         res.sendfile('./public/js/profile/profile.tmpl.html');
     });
 
-	// application -------------------------------------------------------------
-	app.get('*', function(req, res) {
-		console.log('Application Router: Catch all fired. Returning: ./public' + req.originalUrl);
-		res.sendfile('./public' + req.originalUrl); // load the single view file (angular will handle the page changes on the front-end)
-	});
+    // =====================================
+    // GOOGLE ROUTES =======================
+    // =====================================
+    // send to google to do the authentication
+    // profile gets us their basic information including their name
+    // email gets their emails
+    app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
+
+    // the callback after google has authenticated the user
+    app.get('/auth/google/callback',
+            passport.authenticate('google', {
+                    successRedirect : '/profile',
+                    failureRedirect : '/'
+            }));
+
+
+
+
+    // application -------------------------------------------------------------
+    app.get('*', function(req, res) {
+        console.log('Application Router: Catch all fired. Returning: ./public' + req.originalUrl);
+        res.sendfile('./public' + req.originalUrl); // load the single view file (angular will handle the page changes on the front-end)
+    });
 
 	// route middleware to make sure a user is logged in
 	function isLoggedIn(req, res, next) {
