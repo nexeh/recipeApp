@@ -1,1 +1,1 @@
-angular.module('recipeApp', ['recipeApp.recipe', 'recipeService']);
+angular.module('recipeApp', ['recipeApp.recipe', 'recipeApp.recipe.recipeService', 'recipeApp.recipe.recipeController']);

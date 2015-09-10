@@ -1,14 +1,14 @@
 angular.module('recipeApp.recipe', [])
 
 	// inject the Recipe service factory into our controller
-	.controller('mainController', ['$scope','$http','Recipe', function($scope, $http, Recipe) {
+	.controller('mainController', ['$scope','$http','RecipeService', function($scope, $http, RecipeService) {
 		$scope.formData = {};
 		$scope.loading = true;
 
 		// GET =====================================================================
 		// when landing on the page, get all recipe and show them
 		// use the service to get all the recipe
-		Recipe.get()
+		RecipeService.get()
 			.success(function(data) {
 				$scope.recipes = data;
 				$scope.loading = false;
@@ -24,7 +24,7 @@ angular.module('recipeApp.recipe', [])
 				$scope.loading = true;
 
 				// call the create function from our service (returns a promise object)
-				Recipe.create($scope.formData)
+				RecipeService.create($scope.formData)
 
 					// if successful creation, call our get function to get all the new recipe
 					.success(function(data) {
@@ -40,7 +40,7 @@ angular.module('recipeApp.recipe', [])
 		$scope.deleteRecipe = function(id) {
 			$scope.loading = true;
 
-			Recipe.delete(id)
+			RecipeService.delete(id)
 				// if successful creation, call our get function to get all the new recipe
 				.success(function(data) {
 					$scope.loading = false;

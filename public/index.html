@@ -23,57 +23,16 @@
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
 
 	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
-	<script src="js/services/recipeService.js"></script> <!-- load our recipe service -->
+	<script src="js/recipe/recipe.service.js"></script> <!-- load our recipe service -->
+	<script src="js/recipe/recipe.controller.js"></script> <!-- load our recipe service -->
 	<script src="js/core.js"></script> <!-- load our main application -->
 
 </head>
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
+	Hello World {{loading}}
 	<div class="container">
-
-		<!-- HEADER AND Recipe COUNT -->
-		<div class="jumbotron text-center">
-			<h1>My recepes <span class="label label-info">{{ recipes.length }}</span></h1>
-		</div>
-
-		<!-- Recipe LIST -->
-		<div id="recipe-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-
-
-
-				<!-- LOOP OVER THE RecipeS IN $scope.recipes -->
-				<div class="checkbox" ng-repeat="recipe in recipes">
-					<label>
-						<input type="checkbox" ng-click="deleteRecipe(recipe._id)"> {{ recipe.title }}
-					</label>
-				</div>
-
-				<p class="text-center" ng-show="loading">
-					<span class="fa fa-spinner fa-spin fa-3x"></span>
-				</p>
-
-			</div>
-		</div>
-
-		<!-- FORM TO CREATE RecipeS -->
-		<div id="recipe-form" class="row">
-			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<form>
-					<div class="form-group">
-
-						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="Title" ng-model="formData.title">
-						<input type="text" class="form-control input-lg text-center" placeholder="Description" ng-model="formData.description">
-					</div>
-
-					<!-- createRecipe() WILL CREATE NEW RecipeS -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createRecipe()">Add</button>
-				</form>
-			</div>
-		</div>
-
+		<div ng-include="'js/recipe/recipe.tmpl.html'"></div>
 	</div>
-
 </body>
 </html>
