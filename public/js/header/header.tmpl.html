@@ -1,0 +1,35 @@
+<div class="header" ng-controller="headerController">
+	<div class="applicationName">
+		{{applicationName}}
+	</div>
+
+	<div class="navigation">
+		<div class="website" ng-show="!isLoggedIn">
+			<ul>
+				<li>Tour</li>
+				<li>Blog</li>
+			</ul>
+		</div>
+
+		<div class="application" ng-show="isLoggedIn">
+			<ul>
+				<li>Recipes</li>
+				<li>Plan</li>
+				<li>Shop</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="user">
+		<div ng-show="!isLoggedIn">
+			<ul>
+				<li>Login</li>
+			</ul>
+		</div>
+
+		<div ng-show="isLoggedIn">
+			<a href="#"><img src=""> {{userName}}</a>
+		</div>
+	</div>
+
+</div>
