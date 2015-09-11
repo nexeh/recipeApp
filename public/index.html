@@ -5,31 +5,26 @@
 <head>
 	<!-- META -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Recipe Manager</title>
 
 	<!-- SCROLLS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
-		html 					{ overflow-y:scroll; }
-		body 					{ padding-top:50px; }
-		#recipe-list 				{ margin-bottom:30px; }
-		#recipe-form 	 			{ margin-bottom:50px; }
-	</style>
 	<link rel="stylesheet" href="js/header/header.style.css">
 
 	<!-- SPELLS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
-
-	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
-	<script src="js/recipe/recipe.service.js"></script> <!-- load our recipe service -->
-	<script src="js/recipe/recipe.controller.js"></script> <!-- load our recipe service -->
-	<script src="js/core.js"></script> <!-- load our main application -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/controllers/main.js"></script>
+	<script src="js/recipe/recipe.service.js"></script>
+	<script src="js/recipe/recipe.controller.js"></script>
+	<script src="js/core.js"></script>
 	<script src="js/header/header.controller.js"></script>
-
 </head>
+
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
 	<div ng-include="'js/header/header.tmpl.html'"></div>
