@@ -61,11 +61,32 @@ module.exports = function(app, passport) {
     });
 
     // process the login form
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
+    app.post('/login', function(req, res, next) {
+
+        console.log("Login AUTH!");
+        passport.authenticate('local-login', function(err, user, info) {
+
+            if (err) { 
+                return next(err);
+            }
+
+        // Redirect if it fails
+        if (!user) {
+            return res.redirect('/login');
+        }
+
+        req.logIn(user, function(err) {
+              if (err) {
+                return next(err);
+              }
+
+              console.log('user: ', user);
+              // Redirect if it succeeds
+              return res.send(user);
+          });
+
+        })(req, res, next);
+    });
 
      app.get('/signup', function(req, res) {
 
