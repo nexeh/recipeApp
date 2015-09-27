@@ -1,14 +1,14 @@
-<div class="recipeEdit">
+<div class="recipeEdit" ng-controller="recipeController">
 
 	<div id="recipe-form" class="row">
 		<div class="col-sm-12">
 			<label>Title</label>
-            <input class="form-control" id="title" type="text" placeholder="Garden fresh speghetti">
+            <input class="form-control" id="title" type="text" placeholder="Garden fresh speghetti" ng-model="recipeForm.title">
 		</div>
 
 		<div class="col-sm-8">
 			<label>Description</label>
-            <textarea class="form-control" id="decription" type="text" placeholder="My grandmothers secret speghetti recipe." rows="3"></textarea>
+            <textarea class="form-control" id="decription" type="text" placeholder="My grandmothers secret speghetti recipe." rows="3" ng-model="recipeForm.description"></textarea>
 		</div>
 
 		<div class="col-sm-4 col-md-3">
@@ -19,37 +19,22 @@
 
 		<div class="col-sm-8">
 			<label>Ingredients</label>
-			<div ng-repeate="ingredient in reciepeForm.ingredients"><ingredient ingredientData="ingredient"></ingredient></div>
+
+			<div ng-repeat="ingredient in recipeForm.ingredients"><ingredient ingredientData="ingredient"></ingredient></div>
+            <button ng-click="addIngredient()">Add</button>
 		</div>
 
 		<div class="col-sm-8">
 			<label>Instructions</label>
-			<div>
+			<div ng-repeat="instrcution in recipeForm.instructions">
 
                 <div class="col-xs-12">
                 	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder"></textarea>
                 </div>
             </div>
-            <div>
-                <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
-                </div>
-            </div>
-            <div>
-                <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
-                </div>
-            </div>
-            <div>
-                <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
-                </div>
-            </div>
-            <div>
-                <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Boil water"></textarea>
-                </div>
-            </div>
+            <button ng-click="addInstruction()">Add</button>
 		</div>
+
+        <button ng-click="saveRecipe()">SAVE</button>
 	</div>
 </div>
