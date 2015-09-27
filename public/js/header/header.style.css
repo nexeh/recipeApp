@@ -1,0 +1,90 @@
+/*$purple: #2f2235; //rgba(47, 34, 53, 100)
+$red: #92140c; //rgba(146, 20, 12, 100)
+$color3: #dcab6b; //rgba(220, 171, 107, 100)
+$color4: #ecf8f8; //rgba(236, 248, 248, 100)
+$color5: #ffffb3; //rgba(255, 255, 179, 100)*/
+
+/*.header {
+    background-color: #2f2235;
+    color: #92140c;
+    height: 75px;
+}
+
+.header .applicationName {
+    font-weight: bold;
+    padding-top: 25px;
+    font-size: 18px;
+}
+
+.header ul {
+    list-style-type: none;
+    height: 75px;
+}
+
+.header li {
+    background-color: #92140c;
+    color: #2f2235;
+    height: 100%;
+    display: inline;
+}*/
+
+#login-dp{
+    min-width: 300px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 32%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+
+
+.btn-gp{
+    color: #fff;
+    background-color:#D50F25;
+}
+.btn-gp:hover{
+    color: #fff;
+    background-color:#D50F25 
+}
+
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
