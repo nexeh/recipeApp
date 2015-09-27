@@ -24,10 +24,14 @@ module.exports = function(app) {
 	// create recipe and send back all recipes after creation
 	app.post('/api/recipe', function(req, res) {
 
+		console.log('req.body', req.body);
+
 		// create a recipe, information comes from AJAX request from Angular
 		Recipe.create({
 			title : req.body.title,
-			description : req.body.description
+			description : req.body.description,
+			ingredients: req.body.ingredients,
+			instructions: req.body.instructions
 		}, function(err, recipe) {
 			if (err)
 				res.send(err);

@@ -2,7 +2,8 @@ angular.module('recipeApp.recipe.ingredient.ingredientDirective', ['recipeApp.re
 .directive('ingredient', function() {
     return {
     	restrict: 'E',
-        templateUrl: 'js/recipe/ingredient/ingredient.tmpl.html'
+        templateUrl: 'js/recipe/ingredient/ingredient.tmpl.html',
+        replace: true
   	};
 });
 

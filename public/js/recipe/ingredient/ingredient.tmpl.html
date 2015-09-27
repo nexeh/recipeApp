@@ -1,11 +1,8 @@
-<div class="ingrediant" ng-controller='ingredientController'>
-    <div class="col-xs-1">
-    	<input class="form-control" id="ingQty" type="text" placeholder="1" ng-model="ingredient.quantity">
+<div class="ingrediant col-xs-12" ng-controller='ingredientController'>
+    <div class="col-xs-11">
+    	<textarea class="form-control" id="ingredient" type="text" placeholder="Garlic powder" ng-model="ingredient.text" ng-change="changeIngredient($index)"></textarea>
     </div>
     <div class="col-xs-1">
-    	<input class="form-control" id="ingUnit" type="text" placeholder="Tbsp" ng-model="ingredient.unit">
-    </div>
-    <div class="col-xs-10">
-    	<input class="form-control" id="ingNane" type="text" placeholder="Garlic powder" ng-model="ingredient.name">
+    	<button ng-show="ingredient.text" ng-click="recipeForm.ingredients.splice($index,1)">[Remove]</button>
     </div>
 </div>

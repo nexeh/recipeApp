@@ -18,26 +18,30 @@
 			</a>
 		</div>
 
-		<div class="col-sm-8">
+		<div class="col-sm-8 clearfix">
 			<label>Ingredients</label>
 
-			<div ng-repeat="ingredient in recipeForm.ingredients">
-                <ingredient ingredientData="ingredient"></ingredient>
+			<div class="col-sm-12">
+                <ingredient ingredientData="ingredient" ng-repeat="ingredient in recipeForm.ingredients"></ingredient>
             </div>
-            <button ng-click="addIngredient()">Add</button>
+
 		</div>
 
 		<div class="col-sm-8">
 			<label>Instructions</label>
 			<div ng-repeat="instruction in recipeForm.instructions">
 
-                <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder" ng-model="instruction.text"></textarea>
+                <div class="col-xs-11">
+                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder" ng-model="instruction.text" ng-change="changeInstruction($index)"></textarea>
+
+                </div>
+                <div class="col-xs-1">
+                    <button ng-show="instruction.text" ng-click="recipeForm.ingredients.splice($index,1)">[Remove]</button>
                 </div>
             </div>
-            <button ng-click="addInstruction()">Add</button>
 		</div>
 
         <button ng-click="saveRecipe()">SAVE</button>
+        <button ng-click="get()">GET</button>
 	</div>
 </div>
