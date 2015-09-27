@@ -21,16 +21,18 @@
 		<div class="col-sm-8">
 			<label>Ingredients</label>
 
-			<div ng-repeat="ingredient in recipeForm.ingredients"><ingredient ingredientData="ingredient"></ingredient></div>
+			<div ng-repeat="ingredient in recipeForm.ingredients">
+                <ingredient ingredientData="ingredient"></ingredient>
+            </div>
             <button ng-click="addIngredient()">Add</button>
 		</div>
 
 		<div class="col-sm-8">
 			<label>Instructions</label>
-			<div ng-repeat="instrcution in recipeForm.instructions">
+			<div ng-repeat="instruction in recipeForm.instructions">
 
                 <div class="col-xs-12">
-                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder"></textarea>
+                	<textarea rows="2" class="form-control" id="instStep" type="text" placeholder="Garlic powder" ng-model="instruction.text"></textarea>
                 </div>
             </div>
             <button ng-click="addInstruction()">Add</button>
