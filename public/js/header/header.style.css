@@ -28,6 +28,80 @@ $color5: #ffffb3; //rgba(255, 255, 179, 100)*/
     display: inline;
 }*/
 
+.navbar-default {
+  background-color: #92140c;
+  border-color: #dcab6b;
+}
+.navbar-default .navbar-brand {
+  color: #ffffb3;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #2f2235;
+}
+.navbar-default .navbar-text {
+  color: #ffffb3;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffb3;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #2f2235;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #92140c;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffffb3;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #2f2235;
+  background-color: #dcab6b;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #92140c;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #2f2235;
+  background-color: #dcab6b;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #2f2235;
+  background-color: #dcab6b;
+}
+.navbar-default .navbar-toggle {
+  border-color: #dcab6b;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #dcab6b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffb3;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffb3;
+}
+.navbar-default .navbar-link {
+  color: #ffffb3;
+}
+.navbar-default .navbar-link:hover {
+  color: #2f2235;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffb3;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #2f2235;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #2f2235;
+    background-color: #dcab6b;
+  }
+}
+
 #login-dp{
     min-width: 300px;
     padding: 14px 14px 0;
