@@ -12,29 +12,28 @@
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
-		html 					{ overflow-y:scroll; }
-		body 					{ padding-top:50px; }
-		#recipe-list 				{ margin-bottom:30px; }
-		#recipe-form 	 			{ margin-bottom:50px; }
-	</style>
+	<link rel="stylesheet" href="js/marketing.frontPage.style.css">
 
 	<!-- SPELLS -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 
-	<script src="js/controllers/main.js"></script> 
-	<script src="js/recipe/recipe.service.js"></script> 
-	<script src="js/recipe/recipe.controller.js"></script> 
-	<script src="js/recipe/recipe.controller.js"></script> 
+	<script src="js/controllers/main.js"></script>
+	<script src="js/recipe/recipe.service.js"></script>
+	<script src="js/recipe/recipe.controller.js"></script>
+	<script src="js/recipe/recipe.controller.js"></script>
 	<script src="js/recipe/ingredient/ingredient.controller.js"></script>
-	<script src="js/recipe/ingredient/ingredient.directive.js"></script> 
-	<script src="js/core.js"></script> 
+	<script src="js/recipe/ingredient/ingredient.directive.js"></script>
+	<script src="js/routes.js"></script>
+	<script src="js/core.js"></script>
+
+	<!-- "angular-ui-router": "~0.2.13", -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
 </head>
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
 	<div class="container">
-		<div ng-include="'js/recipe/recipe.tmpl.html'"></div>
+		<div ui-view></div>
 	</div>
 </body>
 </html>
