@@ -1,9 +1,10 @@
 angular.module('recipeApp.login.loginController', ['recipeApp.login.loginService'])
 
-.controller('loginController', 
+.controller('loginController',
 	['$scope', '$http', 'LoginService', function($scope, $http, LoginService) {
 
 	$scope.loginForm = {};
+	$scope.isLoggedIn = false;
 
 	$scope.login = function () {
 
