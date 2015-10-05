@@ -29,7 +29,6 @@ angular.module('recipeApp.routes', ['ui.router'])
             url: '/recipes',
             templateUrl: 'js/recipe/recipeList.tmpl.html',
             authenticate: false,
-            controller: "recipeListController",
             roles: []
         })
 
