@@ -20,11 +20,7 @@
 
 		<div class="col-sm-8 clearfix">
 			<label>Ingredients</label>
-
-			<div class="col-sm-12">
-                <ingredient ingredientData="ingredient" ng-repeat="ingredient in recipeForm.ingredients"></ingredient>
-            </div>
-
+			<ingredient ingredientData="ingredient" ng-repeat="ingredient in recipeForm.ingredients"></ingredient>
 		</div>
 
 		<div class="col-sm-8">
@@ -36,12 +32,22 @@
 
                 </div>
                 <div class="col-xs-1">
-                    <button ng-show="instruction.text" ng-click="recipeForm.ingredients.splice($index,1)">[Remove]</button>
+
+                    <button
+                        ng-show="instruction.text"
+                        ng-click="recipeForm.instructions.splice($index,1)"
+                        tabindex="-1"
+                        class="btn btn-danger">
+
+                        <span class="glyphicon glyphicon-remove"></span>
+
+                    </button>
                 </div>
             </div>
 		</div>
 
-        <button ng-click="saveRecipe()">SAVE</button>
-        <button ng-click="get()">GET</button>
+        <div class="col-sm-8">
+            <button ng-click="saveRecipe()" class="btn btn-success">Save Recipe</button>
+        </div>
 	</div>
 </div>

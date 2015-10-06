@@ -1,6 +1,7 @@
 angular.module('recipeApp.recipe.recipeController', ['recipeApp.recipe.recipeService'])
 
-.controller('recipeController', ['$scope', 'RecipeService', function($scope, RecipeService) {
+.controller('recipeController', ['$scope', 'RecipeService', '$location',
+	function($scope, RecipeService, $location) {
 
 	$scope.recipeForm = {
 		ingredients: [{}],
@@ -28,14 +29,8 @@ angular.module('recipeApp.recipe.recipeController', ['recipeApp.recipe.recipeSer
 	};
 
 	$scope.saveRecipe = function () {
-		console.log($scope.recipeForm);
 		RecipeService.create($scope.recipeForm);
-	};
-
-	$scope.get = function () {
-		RecipeService.get().then(function (data) {
-			console.log(data);
-		});
+		$location.path('/recipes')
 	};
 
 }]);

@@ -1,8 +1,16 @@
-<div class="ingrediant col-xs-12" ng-controller='ingredientController'>
+<div class="ingrediant" ng-controller='ingredientController'>
     <div class="col-xs-11">
     	<textarea class="form-control" id="ingredient" type="text" placeholder="Garlic powder" ng-model="ingredient.text" ng-change="changeIngredient($index)"></textarea>
     </div>
     <div class="col-xs-1">
-    	<button ng-show="ingredient.text" ng-click="recipeForm.ingredients.splice($index,1)">[Remove]</button>
+    	<button
+            ng-show="ingredient.text"
+            ng-click="recipeForm.ingredients.splice($index,1)"
+            tabindex="-1"
+            class="btn btn-danger">
+
+            <span class="glyphicon glyphicon-remove"></span>
+
+        </button>
     </div>
 </div>
